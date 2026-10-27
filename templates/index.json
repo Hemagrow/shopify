@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "main": {
+      "type": "header",
+      "settings": {}
+    },
+    "hero-banner": {
+      "type": "hero-banner",
+      "settings": {}
+    },
+    "product": {
+      "type": "product",
+      "settings": {}
+    },
+    // "footer": {
+    //   "type": "footer",
+    //   "settings": {}
+    // }
+  },
+  "order": [
+    "main",
+    "hero-banner",
+    "product",
+   
+  ]
+}
