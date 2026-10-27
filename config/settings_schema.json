@@ -1,1 +1,45 @@
-[]
+[
+    {
+        "name": "Page layout",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "home_welcome_message",
+                "label": "Welcome message",
+                "default": "Welcome to my shop!"
+            },
+            {
+                "type": "range",
+                "id": "font_size",
+                "min": 12,
+                "max": 24,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size",
+                "default": 16
+            }
+        ]
+    },
+    {
+        "name": "bg img",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image_with_text_image",
+                "label": "Image"
+            }
+        ]
+    },
+    {
+        "name": "Font Picker",
+        "settings": [
+            {
+                "type": "font_picker",
+                "id": "heading_font",
+                "label": "Heading font",
+                "default": "helvetica_n4"
+            }
+        ]
+    },
+    // {}
+]

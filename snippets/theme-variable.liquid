@@ -1,0 +1,18 @@
+{% style %}
+  {{ settings.heading_font | font_face: font_display: 'swap' }}
+   :root {
+    --heading-font-family:
+      {{ settings.heading_font.family | json }},
+      {{ settings.heading_font.fallback_families }};
+
+    --heading-font-weight:
+      {{ settings.heading_font.weight }};
+  }
+
+
+
+  h1 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
+  }
+{% endstyle %}
