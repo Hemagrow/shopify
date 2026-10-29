@@ -12,5 +12,10 @@
     "image_with_text_image": "shopify://shop_images/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg",
     "heading_font": "poppins_n4",
     "content_for_index": []
+  },
+  "presets": {
+    "preset name": {
+      "heading_font": "roboto"
+    }
   }
 }

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+<div>
+    <h2>{{ section.settings.test}}</h2>
+    <p> {{ section.settings.textarea1 }}</p>
+</div>
+  </body>
+</html>
+
+{% schema %}
+{
+  "name": "Hema",
+  "settings": [
+    {
+      "type": "text",
+      "id": "test",
+      "label": "label",
+      "default": "welcome tl stor"
+      
+    },
+
+     {
+      "type": "textarea",
+      "id": "textarea1",
+      "label": "label",
+      "default": "Lorme welcome tl stor"
+    },
+
+
+
+  ],
+
+  
+
+  "presets": [
+    {
+      "name": "Custom widegename"
+    }
+  ]
+}
+{% endschema %}

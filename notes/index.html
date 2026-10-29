@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs Example</title>
+  <style>
+    .tabs {
+      display: flex;
+      gap: 10px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .tab.active {
+      background: #007bff;
+      color: white;
+    }
+
+    .content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+
+    .content.active {
+      display: block;
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Service</li>
-                <li>Project</li>
-                <li>Contact Us</li>
-            </ul>
-        </nav>
-    </header>
 
+  <div class="tabs">
+    <button class="tab active" onclick="openTab('home', this)">
+      Home
+    </button>
+    <button class="tab" onclick="openTab('about', this)">
+      About
+    </button>
+  </div>
 
+  <div id="home" class="content active">
+    <p>This is the Home tab content.</p>
+  </div>
+
+  <div id="about" class="content">
+    <p>This is the About tab content.</p>
+  </div>
+
+  <script>
+    function openTab(id, button) {
+      document.querySelectorAll('.content').forEach(content => {
+        content.classList.remove('active');
+      });
+
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      button.classList.add('active');
+    }
+  </script>
 
 </body>
-<footer>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed vero tenetur molestiae laboriosam assumenda
-        nesciunt accusamus fugit debitis quae consequuntur odit, unde veniam vel laudantium iure! Exercitationem,
-        doloribus assumenda.</p>
-</footer>
-
 </html>
