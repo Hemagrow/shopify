@@ -11,7 +11,7 @@
     "name": "Header Group",
     "type": "header",
     "sections":{
-        "header":{
+        "header":{  
             "type": "header",
             "settings":{}
         },

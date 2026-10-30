@@ -9,10 +9,7 @@
  */
 {
   "sections": {
-    "product": {
-      "type": "Product",
-      "settings": {}
-    },
+   
     "main": {
       "type": "header",
       "disabled": true,
@@ -28,4 +25,5 @@
     "main",
     "hero-banner"
   ]
+  
 }

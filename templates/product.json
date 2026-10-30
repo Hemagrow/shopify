@@ -8,11 +8,21 @@
  * ------------------------------------------------------------
  */
 {
-    "sections" : {
-        "product":{
-            "type": "footer",
-            "settings":{}
-        },
+  "sections": {
+    "product": {
+      "type": "footer",
+      "settings": {}
     },
-    "order" :["product"]
+    "product_card_LPanxU": {
+      "type": "product-card",
+      "name": "Product card",
+      "settings": {
+        "product": "selling-plans-ski-wax"
+      }
+    }
+  },
+  "order": [
+    "product",
+    "product_card_LPanxU"
+  ]
 }

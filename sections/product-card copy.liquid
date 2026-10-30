@@ -1,0 +1,39 @@
+<div class="product-card">
+  {% if product != blank %}
+    <h2>{{ product.title }}</h2>
+
+    {% if product.featured_image %}
+        {{ product.price | money }}
+      <img
+        src="{{ product.featured_image | image_url: width: 500 }}"
+        alt="{{ product.title | escape }}"
+        width="500"
+        height="500"
+        loading="lazy"
+      >
+    {% endif %}
+
+   
+    {% render 'price', product: featured_product %}
+  {% else %}
+    <p>Select a product to display.</p>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Product card",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Choose product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product card"
+    }
+  ]
+}
+{% endschema %}

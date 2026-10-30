@@ -1,5 +1,40 @@
-<div class="product-card">
-  <h2>{{ product.title }}</h2>
 
-  {% render 'price' %}
+<div class="product-card">
+  {% assign selected_product = section.settings.product %}
+
+  {% if selected_product != blank %}
+    <h2>{{ selected_product.title }}</h2>
+
+    {% if selected_product.featured_image %}
+      <img
+        src="{{ selected_product.featured_image | image_url: width: 500 }}"
+        alt="{{ selected_product.title | escape }}"
+        width="500"
+        height="500"
+        loading="lazy"
+      >
+    {% endif %}
+
+    {% render 'price', product: selected_product %}
+  {% else %}
+    <p>Select a product in this section's settings.</p>
+  {% endif %}
 </div>
+
+{% schema %}
+{
+  "name": "Product card",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Choose product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product card"
+    }
+  ]
+}
+{% endschema %}
